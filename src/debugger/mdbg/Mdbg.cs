@@ -366,6 +366,8 @@ namespace Microsoft.Samples.Tools.Mdbg
             }
             else
             {
+            	CommandBase.WriteOutput(String.Format("{{{0}:{1}}}", pos.Path, pos.Line));
+            	
                 string fileLoc = FileLocator.GetFileLocation(pos.Path);
                 if (fileLoc == null)
                 {
